@@ -9,13 +9,18 @@ int yywrap(void){}
 
 %%
 =   {return EQUAL;}
+"(".*")"   {return PARAMETER;}
+"{"   {return LEFT_CURL;}
+"}"     {return RIGHT_CURL;}
 "int"   {return INT;}    
-[_a-zA-Z][a-zA-Z0-9]*	return IDENTIFIER;
+[a-zA-Z_][a-zA-Z0-9_]*	return IDENTIFIER;
 [1-9][0-9]*	    return INTEGER;
-(   {return LEFT_BRACKET}
-)   {return RIGHT_BRACKET}
 [ \t\n] {;}
-.   {cout<<"Syntax error"<<endl;}
+[/*.*/]     {return COMMENT;}
+.   {cout<<"line "<<yylineno<<" INVALID TOKEN " <<yytext<<endl;}
 %%
 
 int yywrap(void){}
+
+
+// when there is INVALID TOKEN no other result will be shown

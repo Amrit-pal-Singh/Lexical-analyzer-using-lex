@@ -3,5 +3,9 @@
 #define EQUAL 3
 #define INTEGER 4
 #define NOT_IDENTIFIER 5
-#define LEFT_BRACKET 6
-#define RIGHT_BRACKET 7
+#define PARAMETER 6
+#define COMMA 7
+#define LEFT_CURL 8
+#define RIGHT_CURL 9
+#define COMMENT 10
+#define UNDERSCORE 11
