@@ -1,4 +1,4 @@
-#define INT 1
+#define TYPE 1
 #define IDENTIFIER 2
 #define EQUAL 3
 #define INTEGER 4
@@ -9,3 +9,4 @@
 #define RIGHT_CURL 9
 #define COMMENT 10
 #define UNDERSCORE 11
+#define END_OF_FILE 12
