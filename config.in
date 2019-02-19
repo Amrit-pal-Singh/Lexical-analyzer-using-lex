@@ -1,8 +1,28 @@
-int 1a1a = 12
-/* sfas */
-int asf =  2
-int as_AAD_ = 2%
-int 1asf2 = 1           
-/* sfas */
-int nm2e_a(int a, int b){
+int nm2e_a(int a, int b)
+{
+}
+asfasfkjbsf
+int a b; 
+asflksafs
+;
+asflsaf asfasfkjbsf
+printf("i am great")
+int A;
+int aa = 10,bA = 10, c, d = 10, 1e, 1E1 = 1;
+int nmM2e_a(int a, int b){
+    printf("asf")
+}
+
+
+#include<stdio.h>
+char WT_CHK(float wt2, float min, float max) {
+if (wt2 > max || wt2 < min) return ‘F’;
+else return ‘T’;
+}
+
+/* This is the driver function. */
+int main(){
+float ma_x=100, min=10;
+/* Checks the range. */
+printf(“Wt is in range: %c”, WT_CHK(67, min, max));
 }

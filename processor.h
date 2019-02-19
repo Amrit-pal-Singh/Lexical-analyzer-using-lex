@@ -10,3 +10,5 @@
 #define COMMENT 10
 #define UNDERSCORE 11
 #define END_OF_FILE 12
+#define DECLARE1 13
+#define SEMICOLON 14

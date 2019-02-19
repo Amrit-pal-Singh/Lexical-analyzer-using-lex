@@ -7,24 +7,24 @@ int yywrap(void){}
 %}
 
 %option nounput yylineno
-datatype int|char|bool|float|void|for|do|while|if|else|return|void
+datatype int|char|bool|float|double|string|void
 
 %%
 {datatype}  {return TYPE;}
 =   {return EQUAL;}
-"(".*")"   {return PARAMETER;}
-"{"   {return LEFT_CURL;}
-"}"     {return RIGHT_CURL;}
+;   {return SEMICOLON;}
+,   {return COMMA;}
+"(".*")"[ ]*"{"* {return PARAMETER;}
 [a-zA-Z_][a-zA-Z0-9_]*	return IDENTIFIER;
 [1-9][0-9]*	    return INTEGER;
 [ \t\n] {;}
 "/*".*"*/"     {return COMMENT;}
 <<EOF>> return END_OF_FILE;
-.   {cout<<"line "<<yylineno<<" INVALID TOKEN " <<yytext<<endl;}
+.   {;}
 %%
 
 int yywrap(void){}
 
 
-// when there is INVALID TOKEN no other result will be shown
-// how to handle the waste code
+// should be valid for even non declaration statement of function
+// way to remove the break statement from the print_specification_var function.
